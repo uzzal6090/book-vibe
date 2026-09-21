@@ -18,8 +18,8 @@ const Banner = () => {
 
             <h1 className="font-bold text-3xl sm:text-4xl lg:text-5xl xl:text-6xl leading-tight">
               Books to
-              <span className="text-primary"> freshen up </span>
-              your bookshelf!
+              <span className="text-primary"> Freshen up </span>
+              Your bookshelf!
             </h1>
 
             <p className="text-base sm:text-lg text-gray-600 max-w-xl mx-auto lg:mx-0">
