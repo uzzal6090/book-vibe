@@ -1,3 +1,4 @@
+import ReadButton from '@/components/bookDetails/ReadButton';
 import { IBook } from '@/types/books.type';
 import Image from 'next/image';
 import React from 'react';
@@ -10,7 +11,7 @@ interface IBookDetailsPageProps {
     }>
 }
 
-const getBooks = async (): Promise<Book[]> => {
+const getBooks = async (): Promise<IBook[]> => {
   const response = await fetch("http://localhost:3000/booksData.json", {
     cache: "no-store",
   });
@@ -154,9 +155,7 @@ return (
         {/* Action Buttons */}
         <div className="card-actions mt-8 flex flex-wrap gap-3">
 
-          <button className="btn rounded-xl border-0 bg-indigo-600 px-6 text-white shadow-md transition hover:bg-indigo-700 hover:shadow-lg">
-           Read
-          </button>
+          <ReadButton book ={book} />
 
           <button className="btn rounded-xl border border-slate-200 bg-white px-6 text-slate-700 transition hover:border-indigo-200 hover:bg-indigo-50">
             Wisthlist
