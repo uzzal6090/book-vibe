@@ -99,40 +99,51 @@ const Footer = () => {
 
           {/* Stay conected */}
 
-          <div className="mt-5 flex gap-3">
-            {/* Facebook */}
-            <a
-              href="https://www.facebook.com/nayeem.ahmed.uzzal.2024"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Facebook"
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-500 transition-all duration-300 hover:-translate-y-1 hover:border-indigo-600 hover:bg-indigo-600 hover:text-white"
-            >
-              <FaFacebookF size={17} />
-            </a>
+          {/* Connect With Me */}
+<div>
+  <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-slate-800">
+    Connect With Me
+  </h3>
 
-            {/* GitHub */}
-            <a
-              href="https://github.com/uzzal6090"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-500 transition-all duration-300 hover:-translate-y-1 hover:border-indigo-600 hover:bg-indigo-600 hover:text-white"
-            >
-              <FaGithub size={18} />
-            </a>
+  <p className="text-sm leading-6 text-slate-500">
+    Let&apos;s connect and stay in touch.
+  </p>
 
-            {/* LinkedIn */}
-            <a
-              href="https://www.linkedin.com/in/uzzal-hosen-b9ba12395/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-500 transition-all duration-300 hover:-translate-y-1 hover:border-indigo-600 hover:bg-indigo-600 hover:text-white"
-            >
-              <FaLinkedinIn size={18} />
-            </a>
-          </div>
+  <div className="mt-5 flex gap-3">
+    {/* Facebook */}
+    <a
+      href="YOUR_FACEBOOK_URL"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Facebook"
+      className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-500 transition-all duration-300 hover:-translate-y-1 hover:border-indigo-600 hover:bg-indigo-600 hover:text-white"
+    >
+      <FaFacebookF size={17} />
+    </a>
+
+    {/* GitHub */}
+    <a
+      href="https://github.com/uzzal6090"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="GitHub"
+      className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-500 transition-all duration-300 hover:-translate-y-1 hover:border-indigo-600 hover:bg-indigo-600 hover:text-white"
+    >
+      <FaGithub size={18} />
+    </a>
+
+    {/* LinkedIn */}
+    <a
+      href="https://www.linkedin.com/in/uzzal-hosen-b9ba12395/"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="LinkedIn"
+      className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-500 transition-all duration-300 hover:-translate-y-1 hover:border-indigo-600 hover:bg-indigo-600 hover:text-white"
+    >
+      <FaLinkedinIn size={18} />
+    </a>
+  </div>
+</div>
         </div>
 
         {/* Bottom */}
