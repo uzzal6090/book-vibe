@@ -1,4 +1,5 @@
 import ReadButton from '@/components/bookDetails/ReadButton';
+import WishListButton from '@/components/bookDetails/WishListButton';
 import { IBook } from '@/types/books.type';
 import Image from 'next/image';
 import React from 'react';
@@ -157,10 +158,7 @@ return (
 
           <ReadButton book ={book} />
 
-          <button className="btn rounded-xl border border-slate-200 bg-white px-6 text-slate-700 transition hover:border-indigo-200 hover:bg-indigo-50">
-            Wisthlist
-          </button>
-
+         <WishListButton book={book}/>
         </div>
 
       </div>

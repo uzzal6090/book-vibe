@@ -3,24 +3,47 @@
 import { BooksContext } from "@/context/BooksContext";
 import { IBook } from "@/types/books.type";
 import React, { useContext } from "react";
+import { toast } from "react-toastify";
 
-const WishListButton = ({ book }: { book: IBook }) => {
-  const { wishlist, setWishlist } = useContext(BooksContext);
+interface IWishListButtonProps {
+  book: IBook;
+}
 
-  const handleAddToWishlist = () => {
-    console.log("wishlist button triggered", book);
+const WishListButton = ({
+  book,
+}: IWishListButtonProps) => {
+  const context = useContext(BooksContext);
 
-    setWishlist([...wishlist, book]);
+  if (!context) {
+    return null;
+  }
 
-    alert(`"${book.bookName}" added to your wishlist`);
+  const { wishlist, setWishlist } = context;
+
+  const handleWishlist = () => {
+    const alreadyExists = wishlist.some(
+      (wishlistBook) => wishlistBook.bookId === book.bookId
+    );
+
+    if (alreadyExists) {
+      toast.warning("This book is already in your Wishlist!");
+      return;
+    }
+
+    setWishlist((previousBooks) => [
+      ...previousBooks,
+      book,
+    ]);
+
+    toast.success("Book added to Wishlist!");
   };
 
   return (
     <button
-      className="btn rounded-xl border-0 bg-indigo-600 px-6 text-white shadow-md transition hover:bg-indigo-700 hover:shadow-lg"
-      onClick={handleAddToWishlist}
+      onClick={handleWishlist}
+      className="rounded-xl border border-indigo-600 px-6 py-3 font-semibold text-indigo-600 transition hover:bg-indigo-50"
     >
-      Wishlist
+      Add to Wishlist
     </button>
   );
 };
